@@ -1,0 +1,13 @@
+[Unit]
+Description=My Server Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /root/server.py
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=my_server
+
+[Install]
+WantedBy=multi-user.target
