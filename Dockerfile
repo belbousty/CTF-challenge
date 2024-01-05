@@ -54,9 +54,9 @@ COPY resources/sudoers /etc/sudoers
 # Python vulnerable prompt
 COPY resources/builtins.py  /home/agent007/weapons.py
 RUN mkdir /home/agent007/resources
-COPY resources/weapons.txt home/agent007/weapons.txt
+COPY resources/weapons.txt /home/agent007/weapons.txt
 RUN chown root:root /home/agent007/weapons.txt /home/agent007/weapons.py
-RUN chmod -R 711 /home/agent007/wweapons.txt /home/agent007/weapons.py
+RUN chmod -R 711 /home/agent007/weapons.txt /home/agent007/weapons.py
 
 # Vulnerable CMS
 RUN a2ensite sitemagic.conf

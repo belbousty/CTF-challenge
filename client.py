@@ -7,7 +7,7 @@ def decode_message(encoded_message):
     return decoded_message
 
 def start_client():
-    server_address = ('127.0.0.1', 2099)
+    server_address = ('IP', 2023) # put your IP
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     client.connect(server_address)
